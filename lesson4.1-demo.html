@@ -1,0 +1,34 @@
+<html>
+<body>
+
+hello world
+<p>this <b>is</b> a paragraph</p>
+
+<button id='button1'>button one</button>
+
+<script>
+console.log('hello world!!!');
+// try using a function named alert
+
+var clickHandler = function () {
+    var theButton = document.getElementById('button1');
+    theButton.innerText = 'clicked';
+}
+
+// All browsers have an object called document
+// document has a field named getElementById whose value is a function
+// The getElementById function takes one parameter which is the 'id' of the ement to get.
+// The getElementById function returns an object... The object represents a button (in this case)
+var buttonObject = document.getElementById('button1');
+
+// The button object contains a field called onclick.
+buttonObject.onclick = clickHandler;
+
+
+
+</script>
+    
+
+
+</body>
+</html>
