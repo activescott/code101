@@ -1,0 +1,94 @@
+<html>
+<body>
+
+<!-- hello world
+<p>this <b>is</b> a paragraph</p>
+<button id='button1'>button one</button>
+-->
+<br>
+<br>
+<input type="text" id='inputBox'/>
+<button id='add'>add</button>
+<!-- The second value will be selected initially -->
+<select id="selectList" size="5">
+  <option value="value1">Value 1</option> 
+  <option value="value2">Value 2</option>
+  <option value="value3">Value 3</option>
+</select>
+   
+<script>
+console.log('hello world!!!');
+// try using a function named alert
+
+var addClickHandler = function () {
+    console.log('add button clicked');
+    // get text from input text box 
+    var inputBoxObject = document.getElementById('inputBox');
+    var myText = inputBoxObject.value;
+    console.log(myText);
+    // grab the select list
+    var selectObject = document.getElementById('selectList');
+    
+    // check whether there is text in the box
+    // if there is valid text, add it to the list
+    // if no text in box, return an error saying so
+    
+    // check whether the text in the box matches an option on the list
+    
+    for (i=0; i < selectObject.options.length; i++)
+        if (myText = selectObject.options.item(i).value)
+            console.log('already exists');
+        else (
+            var option = document.createElement("option");
+            option.text = myText;
+            selectObject.add(option);
+        )
+            
+        
+    // if it does match an item, return an error saying so
+    // if not a duplicate, add it
+    // add it to the select list
+    
+}
+
+var addButtonObject = document.getElementById('add');
+
+addButtonObject.onclick = addClickHandler;
+
+
+var clickHandler = function () {
+    var theButton = document.getElementById('button1');
+    theButton.innerText = 'clicked';
+}
+
+// All browsers have an object called document
+// document has a field named getElementById whose value is a function
+// The getElementById function takes one parameter which is the 'id' of the element to get.
+// The getElementById function returns an object... The object represents a button (in this case)
+
+// var buttonObject = document.getElementById('button1');
+
+// The button object contains a field called onclick.
+// buttonObject.onclick = clickHandler;
+
+</script>
+
+<p></p>
+<!--   
+<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/13006743_10100683702432279_3906812852303503862_n.jpg?oh=f56de4f945ea5d576e5b4e174355160e&oe=579F5FF2" alt="pretty lady">
+<style>
+    b {
+        font-weight:bold;
+        color:red;
+    }
+    button {
+        color:green;
+    }
+    #button1 {
+        color: blue;
+    }
+</style>
+-->
+
+</body>
+</html>
